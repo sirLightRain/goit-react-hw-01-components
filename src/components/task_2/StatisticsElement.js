@@ -1,4 +1,4 @@
-export const StatisticsLi = ({ objectData: { id, label, percentage } }) => {
+export const StatisticsLi = ({ stats: { id, label, percentage } }) => {
   return (
     <li className="item" key={id}>
       <span className="label">{label}</span>

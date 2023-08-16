@@ -1,5 +1,5 @@
-export const FriendListItem = ({ friendList }) => {
-  const { avatar, name, isOnline, id } = friendList;
+export const FriendListItem = ({ friends }) => {
+  const { avatar, name, isOnline, id } = friends;
   return (
     <li className="item" key={id}>
       <span className="status">{isOnline}isOnline</span>

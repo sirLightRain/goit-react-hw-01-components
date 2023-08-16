@@ -1,10 +1,10 @@
 import { FriendListItem } from './FriendListItem';
 
-export const FriendList = ({ friendList }) => {
+export const FriendList = ({ friends }) => {
   return (
     <ul className="friend-list">
-      {friendList.map(friend => (
-        <FriendListItem key={friend.id} friendList={friend}/>
+      {friends.map(friend => (
+        <FriendListItem key={friend.id} friends={friend}/>
       ))}
     </ul>
   );

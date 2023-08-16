@@ -9,6 +9,7 @@ import { Statistics } from './task_2/Statistics';
 import friend from '../friends.json';
 import { FriendList } from './task_3/FriendListI';
 
+import transaction from '../transactions.json';
 import { TransactionHistory } from './task_4/TransactionHistory';
 
 export const App = () => {
@@ -19,11 +20,11 @@ export const App = () => {
       case 'profile':
         return <Profile info={user} />;
       case 'statistics':
-        return <Statistics objectData={data} />;
+        return <Statistics stats={data} title="Можна не передавати заголовок Upload stats"/>;
       case 'frienlist':
-        return <FriendList friendList={friend} />;
+        return <FriendList friends={friend} />;
       case 'transaction':
-        return <TransactionHistory />;
+        return <TransactionHistory item={transaction}/>;
 
       default:
         return <Profile info={user} />;

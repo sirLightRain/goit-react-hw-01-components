@@ -1,14 +1,14 @@
 import { StatisticsLi } from "./StatisticsElement";
 
-export const Statistics = ({objectData}) => {
+export const Statistics = ({title, stats}) => {
 
     return (
         <section className="statistics">
-            <h2 className="title">Upload stats</h2>
+            {title && <h2 className="title">{title}</h2>}
 
             <ul className="stat-list">
-                {objectData.map((data)=>(
-                    <StatisticsLi key={data.id} objectData={data}/>
+                {stats.map((data)=>(
+                    <StatisticsLi key={data.id} stats={data}/>
                 ))}
             </ul>
         </section>
