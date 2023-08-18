@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
 
 export const AvatarData = styled.div`
-    color: red;
+    color: ${props => props.theme.colors.red};
 `;

@@ -12,6 +12,7 @@ import { FriendList } from './task_3/FriendListI';
 import transaction from './task_4/transactions.json';
 import { TransactionHistory } from './task_4/TransactionHistory';
 import { GlobalStyle } from './GlobalStyle';
+import { Layout } from './Layout';
 
 export const App = () => {
   const [selectedModule, setSelectedModule] = useState('profile');
@@ -38,7 +39,7 @@ export const App = () => {
   };
 
   return (
-    <div>
+    <Layout>
       <div>
         <button onClick={() => setSelectedModule('profile')}>Profile</button>
         <button onClick={() => setSelectedModule('statistics')}>
@@ -53,6 +54,6 @@ export const App = () => {
       </div>
       {renderSelectedModule()}
       <GlobalStyle/>
-    </div>
+    </Layout>
   );
 };

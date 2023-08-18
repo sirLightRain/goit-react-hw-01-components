@@ -20,6 +20,7 @@ ul {
     margin: 0px;
     padding: 0px;
     list-style: none;
+}
 
 img {
     display: block;
