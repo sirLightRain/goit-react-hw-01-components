@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import user from './task_1/user.json';
-import { Profile } from './task_1/Profile';
+import { Profile } from './task_1/Profile/Profile';
 
 import data from './task_2/data.json';
 import { Statistics } from './task_2/Statistics';
@@ -11,6 +11,7 @@ import { FriendList } from './task_3/FriendListI';
 
 import transaction from './task_4/transactions.json';
 import { TransactionHistory } from './task_4/TransactionHistory';
+import { GlobalStyle } from './GlobalStyle';
 
 export const App = () => {
   const [selectedModule, setSelectedModule] = useState('profile');
@@ -23,7 +24,7 @@ export const App = () => {
         return (
           <Statistics
             stats={data}
-            title={"Можна не передавати заголовок Upload stats"}
+            title={'Можна не передавати заголовок Upload stats'}
           />
         );
       case 'frienlist':
@@ -51,6 +52,7 @@ export const App = () => {
         </button>
       </div>
       {renderSelectedModule()}
+      <GlobalStyle/>
     </div>
   );
 };
