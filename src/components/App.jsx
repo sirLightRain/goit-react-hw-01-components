@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 
-import user from '../user.json';
+import user from './task_1/user.json';
 import { Profile } from './task_1/Profile';
 
-import data from '../data.json';
+import data from './task_2/data.json';
 import { Statistics } from './task_2/Statistics';
 
-import friend from '../friends.json';
+import friend from './task_3/friends.json';
 import { FriendList } from './task_3/FriendListI';
 
-import transaction from '../transactions.json';
+import transaction from './task_4/transactions.json';
 import { TransactionHistory } from './task_4/TransactionHistory';
 
 export const App = () => {
@@ -20,11 +20,16 @@ export const App = () => {
       case 'profile':
         return <Profile info={user} />;
       case 'statistics':
-        return <Statistics stats={data} title="Можна не передавати заголовок Upload stats"/>;
+        return (
+          <Statistics
+            stats={data}
+            title={"Можна не передавати заголовок Upload stats"}
+          />
+        );
       case 'frienlist':
         return <FriendList friends={friend} />;
       case 'transaction':
-        return <TransactionHistory item={transaction}/>;
+        return <TransactionHistory item={transaction} />;
 
       default:
         return <Profile info={user} />;

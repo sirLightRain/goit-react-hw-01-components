@@ -1,3 +1,6 @@
+import PropTypes from 'prop-types';
+import './StatisticsElement.css';
+
 export const StatisticsLi = ({ stats: { id, label, percentage } }) => {
   return (
     <li className="item" key={id}>
@@ -6,3 +9,11 @@ export const StatisticsLi = ({ stats: { id, label, percentage } }) => {
     </li>
   );
 };
+
+StatisticsLi.propTypes = {
+  stats: PropTypes.shape ({
+    id: PropTypes.string.isRequired,
+    label: PropTypes.string.isRequired,
+    percentage: PropTypes.number.isRequired,
+  }).isRequired,
+}
