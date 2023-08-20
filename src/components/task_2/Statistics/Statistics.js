@@ -1,19 +1,19 @@
 import PropTypes from 'prop-types';
 import { StatisticsLi } from '../StatisticsElement/StatisticsElement';
 
-import { Wrapper,Title } from './Statistics.styled';
+import { Wrapper, Title, ElementWrapper } from './Statistics.styled';
 
 export const Statistics = ({ title, stats }) => {
   return (
     <section className="statistics">
       <Wrapper>
         {title && <Title className="title">{title}</Title>}
-  
-        <ul className="stat-list">
+
+        <ElementWrapper className="stat-list">
           {stats.map(data => (
             <StatisticsLi key={data.id} stats={data} />
           ))}
-        </ul>
+        </ElementWrapper>
       </Wrapper>
     </section>
   );

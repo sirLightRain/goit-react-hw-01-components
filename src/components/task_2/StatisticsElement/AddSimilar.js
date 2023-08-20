@@ -4,12 +4,12 @@ export const addSimilar = (data) => {
 
   data.forEach(item => {
     if (groupedData[item.label]) {
-        console.log(groupedData);
       groupedData[item.label].percentage += item.percentage;
     } else {
       groupedData[item.label] = { ...item };
     }
   });
+  console.log("Новий об'єкт має вигляд: ", groupedData);
   console.log(groupedData);
   return Object.values(groupedData);
 };
