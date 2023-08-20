@@ -9,10 +9,10 @@ import { addSimilar } from './task_2/StatisticsElement/AddSimilar';
 import { coloredStats } from './task_2/StatisticsElement/Colored';
 
 import friend from './task_3/friends.json';
-import { FriendList } from './task_3/FriendListI';
+import { FriendList } from './task_3/FriendListI/FriendList';
 
 import transaction from './task_4/transactions.json';
-import { TransactionHistory } from './task_4/TransactionHistory';
+import { TransactionHistory } from './task_4/TransactionHistory/TransactionHistory';
 import { GlobalStyle } from './GlobalStyle';
 import { Layout } from './Layout';
 import { ButtonCover, Button } from './App.styled';

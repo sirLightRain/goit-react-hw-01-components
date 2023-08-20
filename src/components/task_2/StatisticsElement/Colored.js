@@ -6,6 +6,5 @@ export const coloredStats = (obj) => {
     item.bgc = colors[index];
   });
 
-  console.log("Пофарбований обєкт", obj);
   return obj;
 };

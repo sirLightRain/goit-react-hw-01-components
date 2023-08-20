@@ -9,7 +9,5 @@ export const addSimilar = (data) => {
       groupedData[item.label] = { ...item };
     }
   });
-  console.log("Новий об'єкт має вигляд: ", groupedData);
-  console.log(groupedData);
   return Object.values(groupedData);
 };
