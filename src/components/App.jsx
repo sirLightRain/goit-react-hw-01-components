@@ -13,6 +13,7 @@ import transaction from './task_4/transactions.json';
 import { TransactionHistory } from './task_4/TransactionHistory';
 import { GlobalStyle } from './GlobalStyle';
 import { Layout } from './Layout';
+import { ButtonCover, Button } from './App.styled';
 
 export const App = () => {
   const [selectedModule, setSelectedModule] = useState('profile');
@@ -28,7 +29,7 @@ export const App = () => {
             title={'Можна не передавати заголовок Upload stats'}
           />
         );
-      case 'frienlist':
+      case 'friendlist':
         return <FriendList friends={friend} />;
       case 'transaction':
         return <TransactionHistory item={transaction} />;
@@ -40,18 +41,18 @@ export const App = () => {
 
   return (
     <Layout>
-      <div>
-        <button onClick={() => setSelectedModule('profile')}>Profile</button>
-        <button onClick={() => setSelectedModule('statistics')}>
+      <ButtonCover>
+        <Button onClick={() => setSelectedModule('profile')}>Profile</Button>
+        <Button onClick={() => setSelectedModule('statistics')}>
           Statistics
-        </button>
-        <button onClick={() => setSelectedModule('frienlist')}>
+        </Button>
+        <Button onClick={() => setSelectedModule('friendlist')}>
           FriendList
-        </button>
-        <button onClick={() => setSelectedModule('transaction')}>
+        </Button>
+        <Button onClick={() => setSelectedModule('transaction')}>
           TransactionHistory
-        </button>
-      </div>
+        </Button>
+      </ButtonCover>
       {renderSelectedModule()}
       <GlobalStyle/>
     </Layout>

@@ -1,13 +1,16 @@
 import PropTypes from 'prop-types';
+import { Wrapper, AvatarWraper, Name } from './ProfileDescription.styled';
 
 export const Description = ({ avatar, username, tag, location }) => {
   return (
-    <div className="description">
-      <img src={avatar} alt="User avatar" className="avatar" />
-      <p className="name">{username}</p>
+    <Wrapper className="description">
+      <AvatarWraper>
+        <img src={avatar} alt="User avatar" className="avatar" />
+      </AvatarWraper>
+      <Name className="name">{username}</Name>
       <p className="tag">@{tag}</p>
       <p className="location">{location}</p>
-    </div>
+    </Wrapper>
   );
 };
 

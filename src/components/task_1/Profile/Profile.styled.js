@@ -1,5 +1,8 @@
-import { styled } from "styled-components";
+import { styled } from 'styled-components';
 
 export const AvatarData = styled.div`
-    color: ${props => props.theme.colors.red};
+  padding: 15px;
+  border-radius: 8px;
+  color: ${props => props.theme.colors.darkGrey};
+  background-color: ${props => props.theme.colors.grey};
 `;

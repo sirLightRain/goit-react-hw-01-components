@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-import { Description } from '../ProfileDescription';
+import { Description } from '../ProfileDescription/ProfileDescription';
 import { Stats } from '../ProfileStats';
 import { AvatarData } from './Profile.styled';
 
