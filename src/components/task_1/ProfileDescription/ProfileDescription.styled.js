@@ -12,8 +12,8 @@ export const Wrapper = styled.div`
 `;
 
 export const AvatarWraper = styled.div`
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     overflow: hidden;
 `;

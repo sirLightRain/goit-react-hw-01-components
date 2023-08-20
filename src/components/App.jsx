@@ -50,7 +50,7 @@ export const App = () => {
           FriendList
         </Button>
         <Button onClick={() => setSelectedModule('transaction')}>
-          TransactionHistory
+          Transaction History
         </Button>
       </ButtonCover>
       {renderSelectedModule()}

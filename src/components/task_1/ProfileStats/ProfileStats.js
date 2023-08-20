@@ -1,21 +1,22 @@
 import PropTypes from 'prop-types';
+import { ListWrapper, ItemWrapper, Reactions } from './ProfileStats.styled';
 
 export const Stats = ({ stats: { followers, views, likes } }) => {
   return (
-    <ul className="stats">
-      <li>
+    <ListWrapper className="stats">
+      <ItemWrapper>
         <span className="label">Followers</span>
-        <span className="quantity">{followers}</span>
-      </li>
-      <li>
+        <Reactions className="quantity">{followers}</Reactions>
+      </ItemWrapper>
+      <ItemWrapper>
         <span className="label">Views</span>
-        <span className="quantity">{views}</span>
-      </li>
-      <li>
+        <Reactions className="quantity">{views}</Reactions>
+      </ItemWrapper>
+      <ItemWrapper>
         <span className="label">Likes</span>
-        <span className="quantity">{likes}</span>
-      </li>
-    </ul>
+        <Reactions className="quantity">{likes}</Reactions>
+      </ItemWrapper>
+    </ListWrapper>
   );
 };
 
