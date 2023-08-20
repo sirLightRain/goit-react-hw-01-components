@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import './StatisticsElement.css';
 
 export const StatisticsLi = ({ stats: { id, label, percentage } }) => {
   return (

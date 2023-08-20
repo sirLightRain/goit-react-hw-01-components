@@ -4,7 +4,8 @@ import user from './task_1/user.json';
 import { Profile } from './task_1/Profile/Profile';
 
 import data from './task_2/data.json';
-import { Statistics } from './task_2/Statistics';
+import { Statistics } from './task_2/Statistics/Statistics';
+import { addSimilar } from './task_2/StatisticsElement/AddSimilar';
 
 import friend from './task_3/friends.json';
 import { FriendList } from './task_3/FriendListI';
@@ -23,12 +24,8 @@ export const App = () => {
       case 'profile':
         return <Profile info={user} />;
       case 'statistics':
-        return (
-          <Statistics
-            stats={data}
-            title={'Можна не передавати заголовок Upload stats'}
-          />
-        );
+        const newStats = addSimilar(data);
+        return <Statistics stats={newStats} title={'UPLOADT STATS'} />;
       case 'friendlist':
         return <FriendList friends={friend} />;
       case 'transaction':
@@ -54,7 +51,7 @@ export const App = () => {
         </Button>
       </ButtonCover>
       {renderSelectedModule()}
-      <GlobalStyle/>
+      <GlobalStyle />
     </Layout>
   );
 };
