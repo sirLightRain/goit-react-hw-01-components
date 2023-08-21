@@ -3,13 +3,13 @@ import { Wrapper, AvatarWraper, Name } from './ProfileDescription.styled';
 
 export const Description = ({ avatar, username, tag, location }) => {
   return (
-    <Wrapper className="description">
+    <Wrapper>
       <AvatarWraper>
         <img src={avatar} alt="User avatar" className="avatar" />
       </AvatarWraper>
-      <Name className="name">{username}</Name>
-      <p className="tag">@{tag}</p>
-      <p className="location">{location}</p>
+      <Name>{username}</Name>
+      <p>@{tag}</p>
+      <p>{location}</p>
     </Wrapper>
   );
 };

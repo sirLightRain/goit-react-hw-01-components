@@ -1,9 +1,10 @@
 import { TransHistEl } from '../TransactionHistoryElement/TransactionHistoryElement';
 import { Table, TitleCell } from './TransactionHistory.styled';
+import PropTypes from 'prop-types';
 
 export const TransactionHistory = ({ item }) => {
   return (
-    <Table className="transaction-history">
+    <Table>
 
         <thead>
           <tr>
@@ -21,4 +22,8 @@ export const TransactionHistory = ({ item }) => {
 
     </Table>
   );
+};
+
+TransactionHistory.propTypes = {
+  item: PropTypes.array.isRequired,
 };

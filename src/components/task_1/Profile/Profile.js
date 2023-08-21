@@ -8,7 +8,7 @@ export const Profile = ({
   info: { username, tag, avatar, location, stats },
 }) => {
   return (
-    <AvatarData className="Profile">
+    <AvatarData>
       <Description
         avatar={avatar}
         username={username}

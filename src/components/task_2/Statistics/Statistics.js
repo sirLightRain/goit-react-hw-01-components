@@ -5,11 +5,11 @@ import { Wrapper, Title, ElementWrapper } from './Statistics.styled';
 
 export const Statistics = ({ title, stats }) => {
   return (
-    <section className="statistics">
+    <section>
       <Wrapper>
-        {title && <Title className="title">{title}</Title>}
+        {title && <Title>{title}</Title>}
 
-        <ElementWrapper className="stat-list">
+        <ElementWrapper>
           {stats.map(data => (
             <StatisticsLi key={data.id} stats={data} />
           ))}
@@ -21,5 +21,9 @@ export const Statistics = ({ title, stats }) => {
 
 Statistics.propTypes = {
   title: PropTypes.string,
-  stats: PropTypes.array,
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+    }).isRequired,
+  ).isRequired,
 };
